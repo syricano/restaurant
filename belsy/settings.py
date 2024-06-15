@@ -21,6 +21,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-syricano-restaurant-oeliawlvmeq.ws-eu114.gitpod.io',
+    'herokuapp.com',
 ]
 
 
