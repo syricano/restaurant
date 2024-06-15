@@ -21,6 +21,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-syricano-restaurant-oeliawlvmeq.ws-eu114.gitpod.io',
+    'localhost',
+    '127.0.0.1',
     'herokuapp.com',
 ]
 
@@ -52,7 +54,7 @@ ROOT_URLCONF = 'belsy.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -66,7 +68,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'belsy.wsgi.application'
-
+SITE_ID = 1
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
@@ -116,7 +118,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / 'static']
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
