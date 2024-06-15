@@ -23,7 +23,7 @@ ALLOWED_HOSTS = [
     '8000-syricano-restaurant-oeliawlvmeq.ws-eu114.gitpod.io',
     'localhost',
     '127.0.0.1',
-    'herokuapp.com',
+    'belsy1-8e75eec42427.herokuapp.com',
 ]
 
 
@@ -47,6 +47,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'belsy.urls'
