@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block header %}
+<h1>Welcome to Bel'Sy Restaurant</h1>
+<nav>
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="">About</a></li>
+        <!-- Add more navigation links here -->
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<h2>Home Page</h2>
+<p>Welcome to the homepage of Bel'Sy Restaurant.</p>
+{% endblock %}
+
+{% block footer %}
+<p>&copy; 2024. All rights reserved by Anass Muhammad Ali.</p>
+{% endblock %}
