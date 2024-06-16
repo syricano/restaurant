@@ -5,6 +5,24 @@
     
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Bel'Sy Restaurant - Enjoy delicious meals and reserve your table online.">
+        <meta name="keywords" content="Bel'Sy Restaurant, Online Orders, Table Reservations, Fine Dining, Food Delivery">
+        <meta name="author" content="Anass Muhammad Ali">
+        <meta name="robots" content="index, follow">
+
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Bel'Sy Restaurant">
+        <meta property="og:description" content="Enjoy delicious meals and reserve your table online at Bel'Sy Restaurant.">
+        <meta property="og:image" content="">
+        <meta property="og:url" content="http://www.belsyrestaurant.com">
+        <meta property="og:type" content="website">
+
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Bel'Sy Restaurant">
+        <meta name="twitter:description" content="Enjoy delicious meals and reserve your table online at Bel'Sy Restaurant.">
+        <meta name="twitter:image" content="">
+
     {% endblock %}
 
     {% block bootstrap %}
@@ -21,9 +39,31 @@
 <body>
     <header>
         {% block header %}
-
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="{% url 'home' %}">Bel'Sy Restaurant</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'home' %}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Menu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Reservations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         {% endblock %}
-
     </header>
     <main>
         {% block content %}
@@ -33,7 +73,7 @@
     </main>
     <footer>
         {% block footer %}
-        <p>&copy; copry rights reserver for Anass Muhammad Ali</p>
+            <p>&copy; copry rights reserver for Anass Muhammad Ali</p>
         {% endblock %}
 
     </footer>
